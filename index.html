@@ -16,7 +16,43 @@
 
         gtag('config', 'UA-178054680-1');
     </script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
 
+    <script>
+
+
+$(function() {
+
+jQuery.getJSON('config.json', function(data) {
+    jQuery.each(data.bmw, function(i, f) {
+
+
+
+        <!--        <h6>Morning 07:00 AM - 09:30 AM</h6>-->
+        <!--            <h6>Sunday 09:00 AM - 12:00 PM</h6>-->
+        <!--        </td>-->
+    <!--        <td>-->
+    <!--        <h6>Online Meditation and Breath Workshop</h6>-->
+    <!--        <h6>7893683784</h6>-->
+    <!--        <h6 class="email-hider">ch.deepak08@gmail.com</h6>-->
+
+    <!--        </td>-->
+    <!--        <td class="td-hider"><h6>Online </h6>-->
+    <!--        <h6>Languages-Hindi/English</h6></td>-->
+    <!--        <td><a target="_blank" href="http://aolt.in/513348" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Register Now</a></td>-->
+    <!--      </tr>-->
+
+
+                    var tblRow = "<tr>" + "<td scope="row">" +"<h4><strong>"+ f.date + "</strong></h4>"+"</td>" +
+                        "<td>" + f.date + "</td>" + "<td>" + f.time + "</td>"  + "</tr>"
+        jQuery(tblRow).appendTo("#userdata tbody");
+                });
+
+            });
+            });
+
+
+    </script>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta property="fb:pages" content="161655593888611" />
 
@@ -416,6 +452,7 @@ var show_course_date = ''
 <script type="text/javascript">
 var stop_started_course = ''
 </script>
+
 <script type="text/javascript" src="https://www.artofliving.org/sites/all/themes/landing-page/js/landing_pages/html_component.js?q8z5wq"></script>
 <script type="text/javascript" src="https://www.artofliving.org/sites/all/libraries/jquery.actual/jquery.actual.min.js?q8z5wq"></script>
 <script type="text/javascript" src="https://www.artofliving.org/sites/all/themes/landing-page/js/landing_pages/carousel_component.js?q8z5wq"></script>
@@ -903,7 +940,7 @@ src="https://www.artofliving.org/sites/www.artofliving.org/files/wysiwyg_imageup
 <div class="inner-holder"><div class="row-inner-wrapper" row_height=''><div class="row-image-child"></div><div class="row-inner" style=' padding-top: 0px !important; '><div class="row-title-wrap"><h2 class="row-title">Register for the Online Meditation & Breath Workshop</h2></div>
     <p style="text-align: center;">Choose any of the batch</p>
 
-    <table class="table">
+    <table id= "userdata" class="table">
   <thead>
     <tr>
       <th scope="col">Program Date</th>
@@ -913,40 +950,40 @@ src="https://www.artofliving.org/sites/www.artofliving.org/files/wysiwyg_imageup
     </tr>
   </thead>
   <tbody>
-    <tr>
-        <td scope="row">
-        <h4><strong>29 Oct- 1 Nov 2020</strong></h4>
+<!--    <tr>-->
+<!--        <td scope="row">-->
+<!--        <h4><strong>29 Oct- 1 Nov 2020</strong></h4>-->
 
-        <h6>Morning 07:00 AM - 09:30 AM</h6>
-            <h6>Sunday 09:00 AM - 12:00 PM</h6>
-        </td>
-        <td>
-        <h6>Online Meditation and Breath Workshop</h6>
-        <h6>7893683784</h6>
-        <h6 class="email-hider">ch.deepak08@gmail.com</h6>
+<!--        <h6>Morning 07:00 AM - 09:30 AM</h6>-->
+<!--            <h6>Sunday 09:00 AM - 12:00 PM</h6>-->
+<!--        </td>-->
+<!--        <td>-->
+<!--        <h6>Online Meditation and Breath Workshop</h6>-->
+<!--        <h6>7893683784</h6>-->
+<!--        <h6 class="email-hider">ch.deepak08@gmail.com</h6>-->
 
-        </td>
-        <td class="td-hider"><h6>Online </h6>
-        <h6>Languages-Hindi/English</h6></td>
-        <td><a target="_blank" href="http://aolt.in/513348" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Register Now</a></td>
-      </tr>
-      <tr>
-        <td scope="row">
-        <h4><strong>29 Oct- 1 Nov 2020</strong></h4>
+<!--        </td>-->
+<!--        <td class="td-hider"><h6>Online </h6>-->
+<!--        <h6>Languages-Hindi/English</h6></td>-->
+<!--        <td><a target="_blank" href="http://aolt.in/513348" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Register Now</a></td>-->
+<!--      </tr>-->
+<!--      <tr>-->
+<!--        <td scope="row">-->
+<!--        <h4><strong>29 Oct- 1 Nov 2020</strong></h4>-->
 
-        <h6>Evening 07:00 PM - 09:30 PM</h6>
-            <h6>Sunday 09:00 AM - 12:00 PM</h6>
-        </td>
-        <td>
-        <h6>Online Meditation and Breath Workshop</h6>
-        <h6>7893683784</h6>
-        <h6 class="email-hider">ch.deepak08@gmail.com</h6>
+<!--        <h6>Evening 07:00 PM - 09:30 PM</h6>-->
+<!--            <h6>Sunday 09:00 AM - 12:00 PM</h6>-->
+<!--        </td>-->
+<!--        <td>-->
+<!--        <h6>Online Meditation and Breath Workshop</h6>-->
+<!--        <h6>7893683784</h6>-->
+<!--        <h6 class="email-hider">ch.deepak08@gmail.com</h6>-->
 
-        </td>
-        <td class="td-hider"><h6>Online </h6>
-        <h6>Languages-Hindi/English</h6></td>
-        <td><a target="_blank" href="http://aolt.in/513349" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Register Now</a></td>
-      </tr>
+<!--        </td>-->
+<!--        <td class="td-hider"><h6>Online </h6>-->
+<!--        <h6>Languages-Hindi/English</h6></td>-->
+<!--        <td><a target="_blank" href="http://aolt.in/513349" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Register Now</a></td>-->
+<!--      </tr>-->
 
   </tbody>
 </table>

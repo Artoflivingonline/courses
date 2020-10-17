@@ -1,0 +1,26 @@
+{
+    "bmw": [
+        {
+            "courseid": "65086",
+            "date": "Oct 29 - Nov 1, 2020",
+            "time" : "07:00 AM - 9:00 AM"
+        },
+        {
+            "courseid": "65087",
+            "date": "Oct 29 - Nov 1, 2020",
+            "time" : "07:00 PM - 9:00 PM"
+        }
+    ],
+    "sahaj": [
+        {
+            "courseid": "65088",
+            "date": "Oct 29 - Nov 1, 2020",
+            "time" : "07:00 AM - 9:00 AM"
+        },
+        {
+            "courseid": "65089",
+            "date": "Oct 29 - Nov 1, 2020",
+            "time" : "07:00 PM - 9:00 PM"
+        }
+    ]
+} 
