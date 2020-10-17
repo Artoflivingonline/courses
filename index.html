@@ -23,7 +23,8 @@
 
 $(function() {
 
-jQuery.getJSON('config.json', function(data) {
+    var filePath ='config.json';
+jQuery.getJSON(filePath, function(data) {
     jQuery.each(data.bmw, function(i, f) {
 
                     var tblRow = "<tr>" +
