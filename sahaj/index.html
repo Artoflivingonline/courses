@@ -41,6 +41,110 @@
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="cleartype" content="on">
 
+    <script  type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script>
+
+
+
+
+
+
+    $(function() {
+
+        var filePath ='./../config.json';
+        jQuery.getJSON(filePath, function(data) {
+            jQuery.each(data.sahaj, function(i, f) {
+
+                var tblRow = "<tr class=\"course-row\">"
+                    +"<td class=\"course-col-date\">"
+                        +"<span>"+f.date+"</span>"
+                    +" <div class=\"detail-hide\">"
+                        +"<span class=\"course-detail-small course-hours\">"
+                    +"<span class=\"course-hours-child1\">"
+                                + " <span class=\"course-day2\">Weekdays </span>"
+                                + "<span class=\"course-hour2\">"+f.time+"</span>"
+                            +"</span>"
+                        +"</span>"
+                        +"<span class=\"course-detail-small course-hours\">"
+                          +"<span class=\"course-hours-child1\">"
+                                + "<span class=\"course-day2\">Weekend </span>"
+                                + "<span class=\"course-hour2\">"+f.timeWeekend+"</span>"
+                            +"</span>"
+                        +"</span>"
+                    +"</div>"
+                    +"</td>"
+                    +"<td class=\"course-col-program\">"
+                    +"<span class=\"course_title\">Online Sahaj Samadhi Dhyana Yoga</span>"
+                    + "<div class=\"detail-hide\">" +
+                         "<span class=\"teacher-name\">" +
+                        "<span class=\"teacher-title\">Teacher:</span>" +
+                        "<span class=\"teacher-details\"> Ajay Sethi</span>" +
+                        "</span>" +
+                    "</div>"
+                    +" <div class=\"detail-hide\">"
+                    + " <span class=\"teacher-phone no-tablet-down\">"+f.phone+"</span>"
+                    + "</div>"
+                    + "<div class=\"detail-hide\">"
+                    + "<span class=\"teacher-email no-tablet-down\">"+f.email+"</span>"
+                    + "</div>"
+                    +"<!-- tablet only start-->"
+                    +" <span class=\"display-tablet\">Gurgaon, Haryana, India</span>"
+                    +"<span class=\"teacher-name show-tablet-down\">"
+                    +    "<span class=\"teacher-title\">Teacher:</span>"
+                    +       "<span class=\"teacher-details\"> Ajay Sethi</span>"
+                    + "</span>"
+                    +"<span class=\"course-detail-small course-hours show-tablet-down\">"
+                    + "<span class=\"course-day2\">Weekdays </span>"
+                        + "  <span class=\"course-hour2\">"+f.time+"</span>" +
+                    "<br>" +
+                    "</span>"
+                    +"<span class=\"course-detail-small course-hours show-tablet-down\">"
+                    + "<span class=\"course-day2\">Weekend </span>"
+                    + "  <span class=\"course-hour2\">"+f.timeWeekend+"</span>" +
+                    "<br>" +
+                    "</span>"
+
+                    +"<!-- tablet only end-->"
+                    +"</td>"
+                    +"<td class=\"course-col-contact\">"
+                        +"<div class=\"contact-info\">"
+                    +
+                    "<span class=\"display-disktop contact_online\">Online</span>" +
+                    "<span class=\"display-disktop language_title\">Course Language:</span>" +
+                    "<span class=\"display-disktop course_languages\">English, Hindi</span>" +
+                    "<!-- mobile only -->  " +
+                    "<div class=\"show-details-view hidden-sm hidden-lg\">" +
+                    "                                                            <span class=\"course-detail-small course-hours show-tablet-down\">" +
+                    "     <span class=\"course-day2\">Weekdays </span>" +
+                    "     <span class=\"course-hour2\">"+f.time+"</span>" +
+                    "     <br>                  </span>" +
+                    "                                                            <span class=\"course-detail-small course-hours show-tablet-down\">" +
+                    "     <span class=\"course-day2\">Weekend </span>" +
+                    "     <span class=\"course-hour2\">"+f.timeWeekend+"</span>" +
+                    "     <br>                  </span>" +
+
+                    " <span class=\"online show-tablet-down\">Online<span>" +
+                    "     <span class=\"language_details\">" +
+                    "<span class=\"language_title\">Course Language :</span>" +
+                    "<span class=\"course_languages\">English, Hindi</span>\t     </span>" +
+                    "     <span class=\"teacher-name show-tablet-down\">" +
+                    "<span class=\"teacher-title\">Teacher:</span><span class=\"teacher-details\"> Ajay Sethi</span></span>" +
+                    " </span></span></div>        " +
+                    "      <span class=\"teacher-phone show-tablet-down\"><a href=\"tel:"+f.phone+"\"><i class=\"fa fa-phone\"></i>CALL</a></span>" +
+                    "<span class=\"teacher-email show-tablet-down\"><a href=\"mailto:"+f.email+"\"><i class=\"fa fa-envelope\"></i>MAIL</a></span>" +
+                    "<!-- end mobile only -->     </div>    </td>   <td class=\"course-col-register\">" +
+                    "     <a class=\"btn btn-white\" target=\"_blank\" href=\""+f.link+"\">Register Now</a>                    </td>"
+                    + "</tr>"
+
+                jQuery(tblRow).appendTo("#coursedata tbody");
+            });
+
+        });
+    });
+
+
+
+</script>
     <style type="text/css" media="all">
         @import url("https://www.artofliving.org/modules/system/system.base.css?qi69i3");
         @import url("https://www.artofliving.org/modules/system/system.messages.css?qi69i3");
@@ -924,7 +1028,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!--                                                            <th class ="course-col-name">Program Name</th>-->
 <!--                                                            <th class ="course-col-address">Course Info</th>-->
 <!--                                                            <th class ="course-col-explore">Register</th>-->
-<!--                                                        </tr>-->
+<!--                                                        </tr
+
+>-->
 <!--                                                        </thead>-->
 <!--                                                        <tbody class ="search_course_tbody">-->
 <!--&lt;!&ndash;&ndash;&gt;-->
@@ -1086,7 +1192,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     </form>
                                                 </div>
                                                 <div class="search_course_result">
-                                                    <table class="search_course_table" style="display: table;">
+                                                    <table id="coursedata" class="search_course_table" style="display: table;">
                                                         <thead>
                                                         <tr class="course-tr-head">
                                                             <th class="course-col-date">Program Date</th>
@@ -1096,118 +1202,120 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                         </tr>
                                                         </thead>
                                                         <tbody class="search_course_tbody">
-                                                        <tr class="course-row">   <td class="course-col-date">     <span>23-25 Oct, 2020 (Morning)</span>
-                                                            <div class="detail-hide">
-                                                                <span class="course-detail-small course-hours">
-                                                                    <span class="course-hours-child1">
-                                                                        <span class="course-day2">Weekdays</span>
-                                                                        <span class="course-hour2">07:00 AM - 09:00 AM</span>
-                                                                    </span>
-                                                                </span>
-                                                                <span class="course-detail-small course-hours">
-                                                                    <span class="course-hours-child1">
-                                                                        <span class="course-day2">Weekend</span>
-                                                                        <span class="course-hour2">07:00 AM - 09:00 AM</span>
-                                                                    </span>
-                                                                </span>
-                                                            </div>
-                                                        </td>   <td class="course-col-program">
-                                                            <span class="course_title">Online Sahaj Samadhi Dhyana Yoga</span>
-                                                            <div class="detail-hide">
-                                                                <span class="teacher-name">
-                                                                    <span class="teacher-title">Teacher:</span>
-                                                                    <span class="teacher-details"> Ajay Sethi</span>
-                                                                </span>
-                                                            </div>
-                                                            <div class="detail-hide">
-                                                                <span class="teacher-phone no-tablet-down">9966008968</span>
-                                                            </div>
-                                                            <div class="detail-hide">
-                                                                <span class="teacher-email no-tablet-down">artofliving.onlineprograms@gmail.com</span>
-                                                            </div>
-                                                            <!-- tablet only start-->
-                                                            <span class="display-tablet">Gurgaon, Haryana, India</span>
-                                                            <span class="teacher-name show-tablet-down">
-                                                                <span class="teacher-title">Teacher:</span><span class="teacher-details"> Ajay Sethi</span></span>
-                                                            <span class="course-detail-small course-hours show-tablet-down">
-                                                                <span class="course-day2">Weekdays</span>
-                                                                <span class="course-hour2">07:00 AM - 09:00 AM</span>
-                                                                <br>                  </span>
-                                                            <!-- tablet only end-->   </td>
-                                                            <td class="course-col-contact">
-                                                                <div class="contact-info">
-                                                                    <span class="display-disktop contact_online">Online</span>
-                                                                    <span class="display-disktop language_title">Course Language :</span>
-                                                                    <span class="display-disktop course_languages">English, Hindi</span>
-                                                                    <!-- mobile only -->       <div class="show-details-view hidden-sm hidden-lg">
-                                                            <span class="course-detail-small course-hours show-tablet-down">
-                                                                <span class="course-day2">Weekdays</span>
-                                                                <span class="course-hour2">07:00 AM - 09:00 AM</span>
-                                                                <br>                  </span>
-                                                            <span class="online show-tablet-down">Online<span>
-                                                                <span class="language_details">
-                                                                    <span class="language_title">Course Language :</span>
-                                                                    <span class="course_languages">English, Hindi</span>	     </span>
-                                                                <span class="teacher-name show-tablet-down"><span class="teacher-title">Teacher:</span><span class="teacher-details"> Ajay Sethi</span></span>
-                                                            </span></span></div>              <span class="teacher-phone show-tablet-down"><a href="tel:9966008968"><i class="fa fa-phone"></i>CALL</a></span>
-                                                                    <span class="teacher-email show-tablet-down"><a href="mailto:artofliving.onlineprograms@gmail.com"><i class="fa fa-envelope"></i>MAIL</a></span>
-                                                                    <!-- end mobile only -->     </div>    </td>	   <td class="course-col-register">
-                                                                <a class="btn btn-white" target="_blank" href="http://aolt.in/513348">Register Now</a>                    </td> </tr>
-                                                        <tr class="course-row">   <td class="course-col-date">     <span>23-25 Oct, 2020 (Evening)</span>
-                                                            <div class="detail-hide">
-                                                                <span class="course-detail-small course-hours">
-                                                                    <span class="course-hours-child1">
-                                                                        <span class="course-day2">Weekdays</span>
-                                                                        <span class="course-hour2">07:00 PM - 09:00 PM</span>
-                                                                    </span>
-                                                                </span>
-                                                                <span class="course-detail-small course-hours">
-                                                                    <span class="course-hours-child1">
-                                                                        <span class="course-day2">Weekend</span>
-                                                                        <span class="course-hour2">07:00 AM - 09:00 AM</span>
-                                                                    </span>
-                                                                </span>
-                                                            </div>
-                                                        </td>
-                                                            <td class="course-col-program">
-                                                                <span class="course_title">Online Sahaj Samadhi Dhyana Yoga</span>
-                                                                <div class="detail-hide">
-                                                                    <span class="teacher-name"><span class="teacher-title">Teacher:</span><span class="teacher-details"> Ajay Sethi</span></span>
-                                                                </div>
-                                                                <div class="detail-hide">
-                                                                    <span class="teacher-phone no-tablet-down">9966008968</span>       </div>
-                                                                <div class="detail-hide">
-                                                                    <span class="teacher-email no-tablet-down">artofliving.onlineprograms@gmail.com</span>
-                                                                </div>               <!-- tablet only start-->
-                                                                <span class="display-tablet">Gurgaon, Haryana, India</span>
-                                                                <span class="teacher-name show-tablet-down"><span class="teacher-title">Teacher:</span>
-                                                                    <span class="teacher-details"> Ajay Sethi</span></span>
-                                                                <span class="course-detail-small course-hours show-tablet-down">
-                                                                    <span class="course-day2">Weekdays</span>
-                                                                    <span class="course-hour2">07:00 PM - 09:00 PM</span>
-                                                                    <br>                  </span>              <!-- tablet only end-->
-                                                            </td>			<td class="course-col-contact">
-                                                                <div class="contact-info">
-                                                                    <span class="display-disktop contact_online">Online</span>
-                                                                    <span class="display-disktop language_title">Course Language :</span>
-                                                                    <span class="display-disktop course_languages">English, Hindi</span>
-                                                                    <!-- mobile only -->       <div class="show-details-view hidden-sm hidden-lg">
-                                                                    <span class="course-detail-small course-hours show-tablet-down">
-                                                                        <span class="course-day2">Weekdays</span>
-                                                                        <span class="course-hour2">07:00 PM - 09:00 PM</span>          <br>
-                                                                    </span>
-                                                                    <span class="online show-tablet-down">Online<span>
-                                                                        <span class="language_details">
-                                                                            <span class="language_title">Course Language :</span>
-                                                                            <span class="course_languages">English, Hindi</span>
-                                                                        </span>
-                                                                        <span class="teacher-name show-tablet-down"><span class="teacher-title">Teacher:</span><span class="teacher-details"> Ajay Sethi</span></span>              </span></span></div>
-                                                                    <span class="teacher-phone show-tablet-down"><a href="tel:9966008968"><i class="fa fa-phone"></i>CALL</a></span>
-                                                                    <span class="teacher-email show-tablet-down"><a href="mailto:artofliving.onlineprograms@gmail.com"><i class="fa fa-envelope"></i>MAIL</a></span>
-                                                                    <!-- end mobile only -->     </div>    </td>
-                                                            <td class="course-col-register">
-                                                                <a class="btn btn-white" target="_blank" href="http://aolt.in/513348">Register Now</a>
-                                                            </td> </tr>
+<!--                                                        <tr class="course-row">-->
+<!--                                                            <td class="course-col-date">     <span>23-25 Oct, 2020 (Morning)</span>-->
+<!--                                                            <div class="detail-hide">-->
+<!--                                                                <span class="course-detail-small course-hours">-->
+<!--                                                                    <span class="course-hours-child1">-->
+<!--                                                                        <span class="course-day2">Weekdays</span>-->
+<!--                                                                        <span class="course-hour2">07:00 AM - 09:00 AM</span>-->
+<!--                                                                    </span>-->
+<!--                                                                </span>-->
+<!--                                                                <span class="course-detail-small course-hours">-->
+<!--                                                                    <span class="course-hours-child1">-->
+<!--                                                                        <span class="course-day2">Weekend</span>-->
+<!--                                                                        <span class="course-hour2">07:00 AM - 09:00 AM</span>-->
+<!--                                                                    </span>-->
+<!--                                                                </span>-->
+<!--                                                            </div>-->
+<!--                                                        </td>   <td class="course-col-program">-->
+<!--                                                            <span class="course_title">Online Sahaj Samadhi Dhyana Yoga</span>-->
+<!--                                                            <div class="detail-hide">-->
+<!--                                                                <span class="teacher-name">-->
+<!--                                                                    <span class="teacher-title">Teacher:</span>-->
+<!--                                                                    <span class="teacher-details"> Ajay Sethi</span>-->
+<!--                                                                </span>-->
+<!--                                                            </div>-->
+<!--                                                            <div class="detail-hide">-->
+<!--                                                                <span class="teacher-phone no-tablet-down">9966008968</span>-->
+<!--                                                            </div>-->
+<!--                                                            <div class="detail-hide">-->
+<!--                                                                <span class="teacher-email no-tablet-down">artofliving.onlineprograms@gmail.com</span>-->
+<!--                                                            </div>-->
+<!--                                                            &lt;!&ndash; tablet only start&ndash;&gt;-->
+<!--                                                            <span class="display-tablet">Gurgaon, Haryana, India</span>-->
+<!--                                                            <span class="teacher-name show-tablet-down">-->
+<!--                                                                <span class="teacher-title">Teacher:</span><span class="teacher-details"> Ajay Sethi</span></span>-->
+<!--                                                            <span class="course-detail-small course-hours show-tablet-down">-->
+<!--                                                                <span class="course-day2">Weekdays</span>-->
+<!--                                                                <span class="course-hour2">07:00 AM - 09:00 AM</span>-->
+<!--                                                                <br>                  </span>-->
+<!--                                                            &lt;!&ndash; tablet only end&ndash;&gt;   </td>-->
+<!--                                                            <td class="course-col-contact">-->
+<!--                                                                <div class="contact-info">-->
+<!--                                                                    <span class="display-disktop contact_online">Online</span>-->
+<!--                                                                    <span class="display-disktop language_title">Course Language :</span>-->
+<!--                                                                    <span class="display-disktop course_languages">English, Hindi</span>-->
+<!--                                                                    &lt;!&ndash; mobile only &ndash;&gt;       <div class="show-details-view hidden-sm hidden-lg">-->
+<!--                                                            <span class="course-detail-small course-hours show-tablet-down">-->
+<!--                                                                <span class="course-day2">Weekdays</span>-->
+<!--                                                                <span class="course-hour2">07:00 AM - 09:00 AM</span>-->
+<!--                                                                <br>                  </span>-->
+<!--                                                            <span class="online show-tablet-down">Online<span>-->
+<!--                                                                <span class="language_details">-->
+<!--                                                                    <span class="language_title">Course Language :</span>-->
+<!--                                                                    <span class="course_languages">English, Hindi</span>	     </span>-->
+<!--                                                                <span class="teacher-name show-tablet-down"><span class="teacher-title">Teacher:</span><span class="teacher-details"> Ajay Sethi</span></span>-->
+<!--                                                            </span></span></div>              <span class="teacher-phone show-tablet-down"><a href="tel:9966008968"><i class="fa fa-phone"></i>CALL</a></span>-->
+<!--                                                                    <span class="teacher-email show-tablet-down"><a href="mailto:artofliving.onlineprograms@gmail.com"><i class="fa fa-envelope"></i>MAIL</a></span>-->
+<!--                                                                    &lt;!&ndash; end mobile only &ndash;&gt;     </div>    </td>	   <td class="course-col-register">-->
+<!--                                                                <a class="btn btn-white" target="_blank" href="http://aolt.in/513348">Register Now</a>                    </td> </tr>-->
+<!--                                                        <tr class="course-row">-->
+<!--                                                            <td class="course-col-date">     <span>23-25 Oct, 2020 (Evening)</span>-->
+<!--                                                            <div class="detail-hide">-->
+<!--                                                                <span class="course-detail-small course-hours">-->
+<!--                                                                    <span class="course-hours-child1">-->
+<!--                                                                        <span class="course-day2">Weekdays</span>-->
+<!--                                                                        <span class="course-hour2">07:00 PM - 09:00 PM</span>-->
+<!--                                                                    </span>-->
+<!--                                                                </span>-->
+<!--                                                                <span class="course-detail-small course-hours">-->
+<!--                                                                    <span class="course-hours-child1">-->
+<!--                                                                        <span class="course-day2">Weekend</span>-->
+<!--                                                                        <span class="course-hour2">07:00 AM - 09:00 AM</span>-->
+<!--                                                                    </span>-->
+<!--                                                                </span>-->
+<!--                                                            </div>-->
+<!--                                                        </td>-->
+<!--                                                            <td class="course-col-program">-->
+<!--                                                                <span class="course_title">Online Sahaj Samadhi Dhyana Yoga</span>-->
+<!--                                                                <div class="detail-hide">-->
+<!--                                                                    <span class="teacher-name"><span class="teacher-title">Teacher:</span><span class="teacher-details"> Ajay Sethi</span></span>-->
+<!--                                                                </div>-->
+<!--                                                                <div class="detail-hide">-->
+<!--                                                                    <span class="teacher-phone no-tablet-down">9966008968</span>       </div>-->
+<!--                                                                <div class="detail-hide">-->
+<!--                                                                    <span class="teacher-email no-tablet-down">artofliving.onlineprograms@gmail.com</span>-->
+<!--                                                                </div>               &lt;!&ndash; tablet only start&ndash;&gt;-->
+<!--                                                                <span class="display-tablet">Gurgaon, Haryana, India</span>-->
+<!--                                                                <span class="teacher-name show-tablet-down"><span class="teacher-title">Teacher:</span>-->
+<!--                                                                    <span class="teacher-details"> Ajay Sethi</span></span>-->
+<!--                                                                <span class="course-detail-small course-hours show-tablet-down">-->
+<!--                                                                    <span class="course-day2">Weekdays</span>-->
+<!--                                                                    <span class="course-hour2">07:00 PM - 09:00 PM</span>-->
+<!--                                                                    <br>                  </span>              &lt;!&ndash; tablet only end&ndash;&gt;-->
+<!--                                                            </td>			<td class="course-col-contact">-->
+<!--                                                                <div class="contact-info">-->
+<!--                                                                    <span class="display-disktop contact_online">Online</span>-->
+<!--                                                                    <span class="display-disktop language_title">Course Language :</span>-->
+<!--                                                                    <span class="display-disktop course_languages">English, Hindi</span>-->
+<!--                                                                    &lt;!&ndash; mobile only &ndash;&gt;       <div class="show-details-view hidden-sm hidden-lg">-->
+<!--                                                                    <span class="course-detail-small course-hours show-tablet-down">-->
+<!--                                                                        <span class="course-day2">Weekdays</span>-->
+<!--                                                                        <span class="course-hour2">07:00 PM - 09:00 PM</span>          <br>-->
+<!--                                                                    </span>-->
+<!--                                                                    <span class="online show-tablet-down">Online<span>-->
+<!--                                                                        <span class="language_details">-->
+<!--                                                                            <span class="language_title">Course Language :</span>-->
+<!--                                                                            <span class="course_languages">English, Hindi</span>-->
+<!--                                                                        </span>-->
+<!--                                                                        <span class="teacher-name show-tablet-down"><span class="teacher-title">Teacher:</span><span class="teacher-details"> Ajay Sethi</span></span>              </span></span></div>-->
+<!--                                                                    <span class="teacher-phone show-tablet-down"><a href="tel:9966008968"><i class="fa fa-phone"></i>CALL</a></span>-->
+<!--                                                                    <span class="teacher-email show-tablet-down"><a href="mailto:artofliving.onlineprograms@gmail.com"><i class="fa fa-envelope"></i>MAIL</a></span>-->
+<!--                                                                    &lt;!&ndash; end mobile only &ndash;&gt;     </div>    </td>-->
+<!--                                                            <td class="course-col-register">-->
+<!--                                                                <a class="btn btn-white" target="_blank" href="http://aolt.in/513348">Register Now</a>-->
+<!--                                                            </td> </tr>-->
                                                         </tbody>
                                                     </table>
                                                     <a href="javascript:;" class="load_more load_more_586006" offset="0">Load more</a>
