@@ -16,7 +16,64 @@
 
         gtag('config', 'UA-178054680-1');
     </script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
 
+    <script>
+
+
+        $(function() {
+
+            var filePath ='./../config.json';
+            jQuery.getJSON(filePath, function(data) {
+                jQuery.each(data.utkarsh, function(i, f) {
+
+                    var tblRow = "<tr>" +
+                        "<td scope=\"row\">"
+                        +"<h4><strong>"+ f.date + "</strong></h4>"
+                        +"<h6><strong>"+ f.time + "</strong></h6>"
+                        +"</td>" +
+                        "<td>"
+                        +"<h6>Online Utkarsh Yoga</h6>"
+                        +"<h6>"+f.phone+"</h6>"
+                        +"<h6 class=\"email-hider\">"+f.email+"</h6>"
+                        +"</td>" +
+                        " <td >            <h6 style=\"font-weight: bold;\"> 8 to 13 years</h6>\n"
+                        +"            <h6>Online </h6>\n"
+                        + "<h6>Languages-Hindi/English</h6></td>"
+                        +"<td>" +
+                        "<a href="+ f.link+ " target=\"_blank\" class=\"btn btn-primary btn-lg active\" role=\"button\" aria-pressed=\"true\">Register Now</a></td>"
+                        + "</tr>"
+
+                    jQuery(tblRow).appendTo("#coursedata tbody");
+                });
+
+
+                jQuery.each(data.medha, function(i, f) {
+
+                    var tblRow = "<tr>" +
+                        "<td scope=\"row\">"
+                        +"<h4><strong>"+ f.date + "</strong></h4>"
+                        +"<h6><strong>"+ f.time + "</strong></h6>"
+                        +"</td>" +
+                        "<td>"
+                        +"<h6>Online Medha Yoga Level 1</h6>"
+                        +"<h6>"+f.phone+"</h6>"
+                        +"<h6 class=\"email-hider\">"+f.email+"</h6>"
+                        +"</td>" +
+                        " <td >            <h6 style=\"font-weight: bold;\"> 13+ to 18 years</h6>\n"
+                        +"            <h6>Online </h6>\n"
+                        + "<h6>Languages-Hindi/English</h6></td>"
+                        +"<td>" +
+                        "<a href="+ f.link+ " target=\"_blank\" class=\"btn btn-primary btn-lg active\" role=\"button\" aria-pressed=\"true\">Register Now</a></td>"
+                        + "</tr>"
+
+                    jQuery(tblRow).appendTo("#coursedata tbody");
+                });
+            });
+        });
+
+
+    </script>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta property="fb:pages" content="161655593888611" />
 
@@ -501,7 +558,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div id="admin-element-524491" class="place-holder   div_list div_6 PageRow_4_of_6 div_PageRow  dragable-components" style="overflow: scroll;">
 <div class="inner-holder"><div class="row-inner-wrapper" row_height=''><div class="row-image-child"></div><div class="row-inner" style=' padding-top: 0px !important; '><div class="row-title-wrap"><h2 class="row-title">Register for the Online Kids and Teen Programs</h2></div>
 
-    <table class="table">
+    <table id="coursedata" class="table">
   <thead>
     <tr>
       <th scope="col">Program Date</th>
@@ -513,44 +570,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <tbody>
 
 
-    <tr>
-        <td scope="row">
-            <h4><strong>29-31 October 2020</strong></h4>
-
-            <h6> 05:00 PM - 07:00 PM</h6>
-        </td>
-        <td>
-            <h6>Online Utkarsha Yoga</h6>
-            <h6>98480 62056</h6>
-            <h6 class="email-hider">artofliving.onlineprograms@gmail.com</h6>
-
-        </td>
-        <td >
-            <h6 style="font-weight: bold;"> 8 to 13 years</h6>
-            <h6>Online </h6>
-            <h6>Languages-Hindi/English</h6>
-        </td>
-        <td><a target="_blank" href="http://aolt.in/507285" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Register Now</a></td>
-    </tr>
-    <tr>
-        <td scope="row">
-            <h4><strong>22-24 October 2020</strong></h4>
-
-            <h6> 05:00 PM - 07:00 PM</h6>
-        </td>
-        <td>
-            <h6>Online Medha Yoga Level 1</h6>
-            <h6>98480 62056</h6>
-            <h6 class="email-hider">artofliving.onlineprograms@gmail.com</h6>
-
-        </td>
-        <td>
-            <h6 style="font-weight: bold">13+ to 18 years</h6>
-            <h6>Online </h6>
-            <h6>Languages-Hindi/English</h6>
-        </td>
-        <td><a target="_blank" href="http://aolt.in/506271" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Register Now</a></td>
-    </tr>
 
   </tbody>
 </table>
