@@ -3,12 +3,20 @@
         {
             "courseid": "65086",
             "date": "Oct 29 - Nov 1, 2020",
-            "time" : "07:00 AM - 9:00 AM"
+            "link" : "http://aolt.in/513348",
+            "time" : "07:00 AM - 9:30 AM",
+            "timeWeekend" : "09:00 AM - 12:00 PM",
+            "phone" : "7893683784",
+            "email" : "ch.deepak08@gmail.com"
         },
         {
             "courseid": "65087",
             "date": "Oct 29 - Nov 1, 2020",
-            "time" : "07:00 PM - 9:00 PM"
+            "link" : "http://aolt.in/513349",
+            "time" : "07:00 PM - 9:30 PM",
+            "timeWeekend" : "09:00 AM - 12:00 PM",
+            "phone" : "7893683784",
+            "email" : "ch.deepak08@gmail.com"
         }
     ],
     "sahaj": [
