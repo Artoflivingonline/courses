@@ -16,13 +16,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Upload ftp
-      uses: sebastianpopp/ftp-action@releases/v2
-      with:
-        host: ${{ secrets.HOST }}
-        user: ${{ secrets.UID }}
-        password: ${{ secrets.PSD }}
-        localDir: "kidsTeenYoga"
-        remoteDir: "kidsTeenYoga"
+        uses: sebastianpopp/ftp-action@releases/v2
+        with:
+          host: ${{ secrets.HOST }}
+          user: ${{ secrets.UID }}
+          password: ${{ secrets.PSD }}
+          localDir: "kidsTeenYoga"
+          remoteDir: "kidsTeenYoga"
 #      - name: Simple FTP deploy
 #        uses: kevinpainchaud/simple-ftp-deploy-action@v1.2.1
 #        with:
