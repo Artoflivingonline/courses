@@ -23,11 +23,35 @@ jobs:
           password: ${{ secrets.PSD }}
           localDir: "kidsTeenYoga"
           remoteDir: "kidsTeenYoga"
-#      - name: Simple FTP deploy
-#        uses: kevinpainchaud/simple-ftp-deploy-action@v1.2.1
-#        with:
-#          ftp_host: ${{ secrets.HOST }}
-#          ftp_username: ${{ secrets.UID }}
-#          ftp_password: ${{ secrets.PSD }}
-#          local_source_dir: "kidsTeenYoga"
-#          dist_target_dir: "/kidsTeenYoga"
+      - name: Upload ftp
+        uses: sebastianpopp/ftp-action@releases/v2
+        with:
+          host: ${{ secrets.HOST }}
+          user: ${{ secrets.UID }}
+          password: ${{ secrets.PSD }}
+          localDir: "interested"
+          remoteDir: "interested"
+      - name: Upload ftp
+        uses: sebastianpopp/ftp-action@releases/v2
+        with:
+          host: ${{ secrets.HOST }}
+          user: ${{ secrets.UID }}
+          password: ${{ secrets.PSD }}
+          localDir: "register"
+          remoteDir: "register"
+      - name: Upload ftp
+        uses: sebastianpopp/ftp-action@releases/v2
+        with:
+          host: ${{ secrets.HOST }}
+          user: ${{ secrets.UID }}
+          password: ${{ secrets.PSD }}
+          localDir: "sahaj"
+          remoteDir: "sahaj"
+      - name: Upload ftp
+        uses: sebastianpopp/ftp-action@releases/v2
+        with:
+          host: ${{ secrets.HOST }}
+          user: ${{ secrets.UID }}
+          password: ${{ secrets.PSD }}
+          localDir: "config.json"
+          remoteDir: "config.json"
