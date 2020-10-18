@@ -21,8 +21,8 @@ jobs:
           host: ${{ secrets.HOST }}
           user: ${{ secrets.UID }}
           password: ${{ secrets.PSD }}
-          localDir: "kidsTeenYoga"
-          remoteDir: "kidsTeenYoga"
+          localDir: "courseConfig"
+          remoteDir: "courseConfig"
       - name: Upload ftp
         uses: sebastianpopp/ftp-action@releases/v2
         with:
@@ -31,6 +31,14 @@ jobs:
           password: ${{ secrets.PSD }}
           localDir: "interested"
           remoteDir: "interested"
+      - name: Upload ftp
+        uses: sebastianpopp/ftp-action@releases/v2
+        with:
+          host: ${{ secrets.HOST }}
+          user: ${{ secrets.UID }}
+          password: ${{ secrets.PSD }}
+          localDir: "kidsTeenYoga"
+          remoteDir: "kidsTeenYoga"
       - name: Upload ftp
         uses: sebastianpopp/ftp-action@releases/v2
         with:
@@ -47,11 +55,3 @@ jobs:
           password: ${{ secrets.PSD }}
           localDir: "sahaj"
           remoteDir: "sahaj"
-      - name: Upload ftp
-        uses: sebastianpopp/ftp-action@releases/v2
-        with:
-          host: ${{ secrets.HOST }}
-          user: ${{ secrets.UID }}
-          password: ${{ secrets.PSD }}
-          localDir: "config.json"
-          remoteDir: "config.json"
