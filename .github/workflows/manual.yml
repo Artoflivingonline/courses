@@ -23,3 +23,5 @@ jobs:
        host: ${{ secrets.HOST }}
        username: ${{ secrets.UID }}
        password: ${{ secrets.PSD }}
+       tryKeyboard: true
+       verbose: true
