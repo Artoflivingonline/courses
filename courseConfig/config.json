@@ -3,18 +3,20 @@
     {
       "courseid": "65088",
       "date": "Nov 19 - Nov 22, 2020",
-      "link": "http://aolt.in/516225",
-      "time": "Morning 07:00 AM - 9:30 AM",
+      "batch": "Morning Batch",
+      "time": "Thur - Sat 07:00 AM - 9:30 AM",
       "timeWeekend": "Sunday 09:00 AM - 12:00 PM",
+      "link": "http://aolt.in/516225",
       "phone": "7893683784",
       "email": "ch.deepak08@gmail.com"
     },
     {
       "courseid": "65087",
       "date": "Nov 19 - Nov 22, 2020",
-      "link": "http://aolt.in/516226",
-      "time": "Evening 07:00 PM - 9:30 PM",
+      "batch": "Evening Batch",
+      "time": "Thur - Sat 07:00 PM - 9:30 PM",
       "timeWeekend": "Sunday 09:00 AM - 12:00 PM",
+      "link": "http://aolt.in/516226",
       "phone": "7893683784",
       "email": "ch.deepak08@gmail.com"
     }

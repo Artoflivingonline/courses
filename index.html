@@ -27,22 +27,21 @@ $(function() {
 jQuery.getJSON(filePath, function(data) {
     jQuery.each(data.bmw, function(i, f) {
 
-                    var tblRow = "<tr>" +
-                        "<td scope=\"row\">"
-                            +"<h4><strong>"+ f.date + "</strong></h4>"
-                            +"<h6><strong>"+ f.time + "</strong></h6>"
-                            +"<h6><strong>"+ f.timeWeekend + "</strong></h6>"
-                        +"</td>" +
-                        "<td>"
-                            +"<h6>Online Meditation and Breath Workshop</h6>"
-                            +"<h6>"+f.phone+"</h6>"
-                            +"<h6 class=\"email-hider\">"+f.email+"</h6>"
-                        +"</td>" +
-                        " <td class=\"td-hider\"><h6>Online </h6>"
-                        + "<h6>Languages-Hindi/English</h6></td>"
-                        +"<td>" +
-                            "<a href="+ f.link+ " target=\"_blank\" class=\"btn btn-primary btn-lg active\" role=\"button\" aria-pressed=\"true\">Register Now</a></td>"
-                        + "</tr>"
+        var tblRow = "<tr>" +
+            "<td scope=\"row\">"
+            +"<h4><strong>"+ f.date + "</strong></h4>"
+            +"<h6>"+ f.time + "</h6>"
+            +"<h6>"+ f.timeWeekend + "</h6>"
+            +"</td>" +
+            "<td>"
+            +"<h6><strong>"+f.batch+"</strong></h6>"
+            +"<h6>"+f.phone+"</h6>"
+            +"<h6 class=\"email-hider\">"+f.email+"</h6>"
+            +"</td>" +
+            "<td>" +
+            "<a href="+ f.link+ " target=\"_blank\" class=\"btn btn-primary btn-lg active\" role=\"button\" aria-pressed=\"true\">Register Now</a></td>"
+            + "</tr>"
+
 
         jQuery(tblRow).appendTo("#coursedata tbody");
                 });
@@ -937,15 +936,14 @@ src="https://www.artofliving.org/sites/www.artofliving.org/files/wysiwyg_imageup
 
 <div id="admin-element-524491" class="place-holder   div_list div_6 PageRow_4_of_6 div_PageRow  dragable-components" style="overflow: scroll;">
 <div class="inner-holder"><div class="row-inner-wrapper" row_height=''><div class="row-image-child"></div><div class="row-inner" style=' padding-top: 0px !important; '><div class="row-title-wrap"><h2 class="row-title">Register for the Online Meditation & Breath Workshop</h2></div>
-    <p style="text-align: center;">Choose any of the batch</p>
+    <p style="text-align: center;">Choose one of the batch</p>
 
     <table id= "coursedata" class="table">
   <thead>
     <tr>
-      <th scope="col">Program Date</th>
-      <th scope="col">Program Name</th>
-      <th scope="col" class="heading-hider">Course Details</th>
-      <th scope="col">Register</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
