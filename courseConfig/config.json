@@ -1,22 +1,13 @@
 {
   "bmw": [
-    {
-      "courseid": "65087",
-      "date": "Mar 18-21, 2021",
-      "batch": "Morning Batch",
-      "time": "Thu-Sat 7-9:00 AM",
-      "timeWeekend": "Sun 9 AM-12 PM",
-      "link": "http://aolt.in/536250",
-      "phone": "7893683784",
-      "email": "ch.deepak08@gmail.com"
-    },
+   
     {
       "courseid": "65088",
-      "date": "Mar 18-21, 2021",
+      "date": "Mar 25-28, 2021",
       "batch": "Evening Batch",
       "time": "Thu-Sat 7-9:00 PM",
       "timeWeekend": "Sun 9 AM-12 PM",
-      "link": "http://aolt.in/536253",
+      "link": "http://aolt.in/540091",
       "phone": "7893683784",
       "email": "ch.deepak08@gmail.com"
     }
