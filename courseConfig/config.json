@@ -2,11 +2,11 @@
   "bmw": [
    {
       "courseid": "65088",
-      "date": "Apr 15-18, 2021",
+      "date": "Apr 22-25, 2021",
       "batch": "Morning Batch",
       "time": "Thu-Sat 7-9:00 AM",
       "timeWeekend": "Sun 9 AM-12 PM",
-      "link": "http://aolt.in/540986",
+      "link": "http://aolt.in/544053",
       "phone": "7893683784",
       "email": "ch.deepak08@gmail.com"
     },
@@ -24,19 +24,17 @@
   "sahaj": [
     {
       "courseid": "65086",
-      "date": "11-13 Dec, 2020 (Morning)",
-      "link": "http://aolt.in/519971",
+      "date": "7-9 May, 2021 (Morning)",
+      "link": "http://aolt.in/545404",
       "time": "07:00 AM - 09:00 AM",
-      "timeWeekend": "10:00 AM - 12:00 PM",
       "phone": "9966008968",
       "email": "artofliving.onlineprograms@gmail.com"
     },
     {
       "courseid": "65087",
-      "date": "11-13 Dec, 2020 (Evening)",
-      "link": "http://aolt.in/519973",
-      "time": "06:00 PM - 08:00 PM",
-      "timeWeekend": "05:00 PM - 07:00 PM",
+      "date": "7-9 May, 2020 (Evening)",
+      "link": "http://aolt.in/545405",
+      "time": "07:30 PM - 09:30 PM",
       "phone": "9966008968",
       "email": "artofliving.onlineprograms@gmail.com"
     }
